@@ -83,6 +83,8 @@ Although direct marketing methods, digital platforms, online marketplaces, and d
 
 ## 🔬 Research Methodology
 
+<div align="center">
+  
 <table>
 <tr><td><strong>Research Design</strong></td><td>Descriptive Research Design</td></tr>
 <tr><td><strong>Research Approach</strong></td><td>Quantitative Research Approach</td></tr>
@@ -93,6 +95,8 @@ Although direct marketing methods, digital platforms, online marketplaces, and d
 <tr><td><strong>Secondary Data</strong></td><td>Books, peer-reviewed research journals, government publications, reports from the Ministry of Agriculture and Farmers Welfare, NABARD, FAO, official websites, and academic publications</td></tr>
 <tr><td><strong>Tools Used</strong></td><td>Microsoft Excel (data organization & preprocessing) and Python / Jupyter Notebook (statistical & predictive analysis)</td></tr>
 </table>
+
+</div>
 
 <details>
 <summary><strong>📌 Limitations of the Study</strong></summary>
@@ -122,6 +126,8 @@ Although direct marketing methods, digital platforms, online marketplaces, and d
 <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" />
 </p>
 
+<div align="center">
+  
 | Layer | Tools |
 |---|---|
 | Data Entry & Cleaning | Microsoft Excel |
@@ -131,6 +137,8 @@ Although direct marketing methods, digital platforms, online marketplaces, and d
 | Visualization | Matplotlib |
 | Documentation & Versioning | GitHub |
 
+</div>
+  
 ---
 
 ## 🔄 Research Workflow
@@ -165,6 +173,8 @@ The research followed a structured, end-to-end analytical pipeline:
 <details>
 <summary><strong>📋 View Full Variable Coding Table</strong></summary>
 
+<div align="center">
+  
 | Variable | Type | Coding |
 |---|---|---|
 | Awareness of Direct Marketing Methods | Independent | Yes = 1, No = 0 |
@@ -176,6 +186,8 @@ The research followed a structured, end-to-end analytical pipeline:
 | Preference for Using Digital Platforms | Independent | Yes = 1, No = 0 |
 | **Fair Price Realization** | **Dependent (Target)** | Yes = 1, No = 0 |
 
+</div>
+  
 </details>
 
 ---
@@ -203,6 +215,8 @@ This descriptive foundation informed the selection of variables carried forward 
 
 Five hypotheses were tested at a 5% significance level (α = 0.05) using Python (Jupyter Notebook):
 
+<div align="center">
+  
 | Hypothesis | Relationship Tested | χ² | p-value | Decision |
 |---|---|---|---|---|
 | H1 | Direct Marketing Awareness ↔ Digital Platform Usage | 96.531 | < 0.001 | Reject H₀ |
@@ -210,6 +224,8 @@ Five hypotheses were tested at a 5% significance level (α = 0.05) using Python 
 | H3 | Market Price Information ↔ Fair Price Received | 22.271 | < 0.001 | Reject H₀ |
 | H4 | Middlemen Influence on Pricing ↔ Fair Price Received | 110.806 | < 0.001 | Reject H₀ |
 | H5 | Customer Interest in Direct Purchase ↔ Preference for Digital Platforms | 105.564 | < 0.001 | Reject H₀ |
+
+</div>
 
 **Contribution:** All five null hypotheses were rejected, confirming statistically significant associations across every tested relationship — demonstrating that awareness, digital adoption, market information access, and middlemen influence are all meaningfully connected to farmers' marketing behaviour and pricing outcomes.
 
@@ -226,6 +242,8 @@ A Pearson Correlation Matrix was computed across Direct Marketing Awareness, Dig
 
 ### Variance Inflation Factor (VIF)
 
+<div align="center">
+  
 | Variable | VIF | Interpretation |
 |---|---|---|
 | Direct Marketing | 20.06 | Severe Multicollinearity |
@@ -233,10 +251,14 @@ A Pearson Correlation Matrix was computed across Direct Marketing Awareness, Dig
 | Market Price Information | 12.25 | Severe Multicollinearity |
 | Storage Facilities | 1.19 | No Multicollinearity |
 
+</div>
+
 **Contribution:** Because Direct Marketing, Digital Platform, and Market Price Information were highly intercorrelated, the Binary Logistic Regression model was built using only **Market Price Information** as the predictor, to preserve statistical stability.
 
 ### Binary Logistic Regression
 
+<div align="center">
+  
 | Model Statistic | Value |
 |---|---|
 | Dependent Variable | Fair Price Received |
@@ -247,6 +269,8 @@ A Pearson Correlation Matrix was computed across Direct Marketing Awareness, Dig
 | Coefficient (β) | 3.563 |
 | p-value | 0.001 |
 | 95% CI | 1.526 to 5.600 |
+
+</div>
 
 **Contribution:** The model converged successfully and was statistically significant. Market Price Information showed a strong, statistically significant positive effect on the likelihood of receiving a fair price — approximately 20% of the variation in fair price realization is explained by this single predictor.
 
@@ -266,25 +290,37 @@ Beyond traditional inferential statistics, the study developed two supervised cl
 
 **Model Performance**
 
+<div align="center">
+  
 | Metric | Value |
 |---|---|
 | Training Accuracy | 87.0% |
 | Testing Accuracy | 91.3% |
 | Overall Accuracy | 91.3% |
 
+</div>
+
 **Confusion Matrix** (23 testing observations)
 
+<div align="center">
+  
 | | Predicted: No Fair Price | Predicted: Fair Price | Total |
 |---|---|---|---|
 | **Actual: No Fair Price** | 18 | 1 | 19 |
 | **Actual: Fair Price** | 1 | 3 | 4 |
 
+</div>
+
 **Classification Report**
 
+<div align="center">
+  
 | Class | Precision | Recall | F1-Score |
 |---|---|---|---|
 | No Fair Price | 0.95 | 0.95 | 0.95 |
 | Fair Price | 0.75 | 0.75 | 0.75 |
+
+</div>
 
 **Interpretation:** Only two misclassifications occurred out of 23 test cases (1 false positive, 1 false negative), reflecting strong, reliable performance.
 
@@ -294,12 +330,16 @@ Beyond traditional inferential statistics, the study developed two supervised cl
 
 **Feature Importance (Decision Tree)**
 
+<div align="center">
+  
 | Variable | Importance Score | Rank |
 |---|---|---|
 | Storage Facilities | 0.775 | 1 |
 | Digital Platform Usage | 0.196 | 2 |
 | Market Price Information | 0.029 | 3 |
 | Direct Marketing Awareness | 0.000 | 4 |
+
+</div>
 
 **Key Finding:** **Storage Facilities** emerged as the most influential predictor — farmers with adequate storage were directly classified as receiving a fair price. **Digital Platform Usage** was the next most important predictor, followed by **Market Price Information**. Notably, **Direct Marketing Awareness received zero importance** in this single Decision Tree — not because it is unimportant in reality, but simply because the tree never selected it for a split, likely due to its strong correlation with the other predictors already used higher up in the tree.
 
@@ -321,30 +361,44 @@ Random Forest is an **ensemble** method: it builds many individual decision tree
 
 **Model Performance**
 
+<div align="center">
+  
 | Metric | Value |
 |---|---|
 | Training Accuracy | 86.96% |
 | Testing Accuracy | 91.30% |
 | Overall Accuracy | 91.30% |
 
+</div>
+
 **Confusion Matrix** (23 testing observations)
 
+<div align="center">
+  
 | | Predicted: No Fair Price | Predicted: Fair Price | Total |
 |---|---|---|---|
 | **Actual: No Fair Price** | 18 | 1 | 19 |
 | **Actual: Fair Price** | 1 | 3 | 4 |
 
+</div>
+
 **Classification Report**
 
+<div align="center">
+  
 | Class | Precision | Recall | F1-Score |
 |---|---|---|---|
 | No Fair Price | 0.95 | 0.95 | 0.95 |
 | Fair Price | 0.75 | 0.75 | 0.75 |
 
+</div>
+
 *(Macro average: 0.85 · Weighted average: 0.91)*
 
 **Feature Importance (Random Forest)**
 
+<div align="center">
+  
 | Variable | Importance Score | Rank |
 |---|---|---|
 | Storage Facilities | 0.6109 | 1 |
@@ -352,12 +406,16 @@ Random Forest is an **ensemble** method: it builds many individual decision tree
 | Direct Marketing Awareness | 0.0941 | 3 |
 | Market Price Information | 0.0583 | 4 |
 
+</div>
+
 **🔑 Major Research Contribution:** Although **Direct Marketing Awareness did not appear as an important split in the single Decision Tree** (importance = 0.000), the **Random Forest recognised its contribution across multiple trees**, assigning it a meaningful importance score of **0.0941**. Because Random Forest evaluates many different tree structures rather than relying on one dominant path, it captured the predictive value of *all* relevant variables far more effectively than the single Decision Tree could — a clear demonstration of why ensemble methods provide a more complete picture of variable importance.
 
 ---
 
 ### Model Comparison
 
+<div align="center">
+  
 | Performance Measure | Decision Tree | Random Forest |
 |---|---|---|
 | Training Accuracy | 87.00% | 86.96% |
@@ -370,6 +428,10 @@ Random Forest is an **ensemble** method: it builds many individual decision tree
 | Recall (Fair Price) | 0.75 | 0.75 |
 | F1-Score (Fair Price) | 0.75 | 0.75 |
 
+</div>
+
+<div align="center">
+  
 | Dimension | Decision Tree | Random Forest |
 |---|---|---|
 | **Interpretability** | High — simple, visual rule-based structure | Moderate — aggregated across many trees, less directly visualizable |
@@ -377,6 +439,8 @@ Random Forest is an **ensemble** method: it builds many individual decision tree
 | **Feature Importance** | Assigned zero importance to one variable | Assigned meaningful importance to *every* predictor |
 | **Generalization** | Good (91.3% testing accuracy) | Equally good (91.30% testing accuracy), with more stable estimates |
 | **Business Usefulness** | Easy to explain to non-technical stakeholders | More trustworthy for identifying *all* drivers of fair pricing |
+
+</div>
 
 **Conclusion:** Both models achieved **identical** testing and overall accuracy (91.30%) and identical Precision/Recall/F1 scores. However, because Random Forest reduces overfitting risk and produced meaningful importance scores for all four predictors — rather than zeroing one out — it is considered the **more reliable and preferred model** for understanding fair price realization among rural farmers.
 
@@ -431,13 +495,30 @@ Random Forest is an **ensemble** method: it builds many individual decision tree
 ---
 
 ## 📁 Repository Structure
-├── data/            # Survey dataset used for statistical and predictive analysis
-├── notebook/         # Jupyter Notebook with Python-based statistical & ML analysis
-├── report/           # Final dissertation report (PDF)
-├── presentation/     # Project presentation slides
-├── docs/             # Supporting documentation
-├── images/           # Charts, diagrams, and visual assets used in this README
+
+```text
+.
+├── data/
+│   └── Rural_Farmers_Dataset.xlsx
+├── notebook/
+│   └── PSRI_Analysis.ipynb
+├── report/
+│   └── MBA_Dissertation_Report.pdf
+├── presentation/
+│   └── Final_Presentation.pdf
+├── docs/
+│   └── Questionnaire.pdf
+├── images/
+│   ├── project-banner.png
+│   ├── research-workflow.png
+│   ├── decision-tree.png
+│   ├── dt-feature-importance.jpeg
+│   ├── rf-feature-importance.jpeg
+│   ├── model-comparison.jpeg
+│   ├── key-findings.png
+│   └── sdgs.png
 └── README.md
+```
 
 ---
 
