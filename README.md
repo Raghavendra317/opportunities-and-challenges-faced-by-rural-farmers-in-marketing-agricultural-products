@@ -1,5 +1,7 @@
 <div align="center">
 
+# PROJECT ON SOCIAL AND RURAL ISSUES
+
 <img src="images/project-banner.png" alt="Project Banner - Opportunities and Challenges Faced by Rural Farmers in Marketing Agricultural Products" width="100%"/>
 
 # 🌾 Opportunities and Challenges Faced by Rural Farmers in Marketing Agricultural Products
