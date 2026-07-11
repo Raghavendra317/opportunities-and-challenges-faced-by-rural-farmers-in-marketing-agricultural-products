@@ -49,7 +49,7 @@ Primary data were collected from **115 rural farmers** and analyzed using **Micr
 - [Machine Learning Section](#-machine-learning-section)
   - [Decision Tree Classification](#-decision-tree-classification)
   - [Random Forest Classification](#-random-forest-classification)
-  - [Model Comparison](#-model-comparison)
+  - [Model Comparison](#model-comparison)
 - [Key Findings](#-key-findings)
 - [Business Recommendations](#-business-recommendations)
 - [Sustainable Development Goals](#-sustainable-development-goals-sdgs)
@@ -289,7 +289,7 @@ Beyond traditional inferential statistics, the study developed two supervised cl
 **Interpretation:** Only two misclassifications occurred out of 23 test cases (1 false positive, 1 false negative), reflecting strong, reliable performance.
 
 <div align="center">
-<img src="images/dt-feature-importance.png" alt="Decision Tree Feature Importance" width="80%"/>
+<img src="images/dt-feature-importance.jpeg" alt="Decision Tree Feature Importance" width="80%"/>
 </div>
 
 **Feature Importance (Decision Tree)**
@@ -308,7 +308,7 @@ Beyond traditional inferential statistics, the study developed two supervised cl
 ### 🌲 Random Forest Classification
 
 <div align="center">
-<img src="images/rf-feature-importance.png" alt="Random Forest Feature Importance" width="80%"/>
+<img src="images/rf-feature-importance.jpeg" alt="Random Forest Feature Importance" width="80%"/>
 </div>
 
 **Why Random Forest, and why after Decision Tree?** A single Decision Tree can be sensitive to the specific splits it happens to choose — as seen above, it assigned zero importance to Direct Marketing Awareness purely as an artifact of its structure. Random Forest was developed next to validate and strengthen these findings.
@@ -356,11 +356,7 @@ Random Forest is an **ensemble** method: it builds many individual decision tree
 
 ---
 
-### ⚖️ Model Comparison
-
-<div align="center">
-<img src="images/model-comparison.png" alt="Model Comparison" width="85%"/>
-</div>
+### Model Comparison
 
 | Performance Measure | Decision Tree | Random Forest |
 |---|---|---|
